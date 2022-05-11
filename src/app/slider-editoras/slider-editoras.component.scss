@@ -1,0 +1,33 @@
+.topo-slider {
+    border-top: 5px solid black;
+}
+
+.fundo-slider {
+    width: 90%;
+    margin: 30px auto 0 auto;
+}
+
+.carousel {
+    height: 380px;
+}
+
+.hq {
+    height: 380px;
+    width: 180px;
+}
+
+div.hq img {
+    margin: 15px;
+    // border: 1px solid red;
+}
+
+p {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    top: -25px;
+    padding-right: 10px;
+    background: #FFF;
+    display: inline;
+    color: black;
+}
