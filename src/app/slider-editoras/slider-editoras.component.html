@@ -1,6 +1,6 @@
-<div class="fundo-slider">
+<div class="fundo-slider mb-5" *ngFor="let e of editoras">
     <div class="topo-slider">
-        <p class="fs-3"><strong>DC Comics</strong></p>
+        <p class="fs-3"><strong>{{ e.editora }}</strong></p>
     </div>
     <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -11,51 +11,12 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row row-cols-6">
-                <div class="col-2">
+                <div class="col-2" *ngFor="let hq of hqs">
                     <div class="hq bg-dark text-light">
-                        <img class="img-fluid" src="../../assets/Capa HQ.png">
-                        <div class="d-flex justify-content-center">
-                            <h1>Batman</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="hq bg-dark text-light">
-                        <img class="img-fluid" src="../../assets/Capa HQ.png">
-                        <div class="d-flex justify-content-center">
-                            <h1>Batman</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="hq bg-dark text-light">
-                        <img class="img-fluid" src="../../assets/Capa HQ.png">
-                        <div class="d-flex justify-content-center">
-                            <h1>Batman</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="hq bg-dark text-light">
-                        <img class="img-fluid" src="../../assets/Capa HQ.png">
-                        <div class="d-flex justify-content-center">
-                            <h1>Batman</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="hq bg-dark text-light">
-                        <img class="img-fluid" src="../../assets/Capa HQ.png">
-                        <div class="d-flex justify-content-center">
-                            <h1>Batman</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="hq bg-dark text-light">
-                        <img class="img-fluid" src="../../assets/Capa HQ.png">
-                        <div class="d-flex justify-content-center">
-                            <h1>Batman</h1>
+                        <img class="img-fluid" [src]="hq.img">
+                        <div class="d-flex justify-content-center align-items-center flex-column">
+                            <h1 class="fs-6" style="margin: 0px 15px; text-align: center">{{ hq.titulo }}</h1>
+                            <button type="button" class="btn btn-indigo mt-3">Ver Mais</button>
                         </div>
                     </div>
                 </div>
@@ -64,3 +25,5 @@
         </div>
     </div>
 </div>
+
+<br><br><br><br><br>
