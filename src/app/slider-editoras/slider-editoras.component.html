@@ -1,17 +1,17 @@
-<div class="fundo-slider mb-5" *ngFor="let e of editoras">
+<!-- <div class="fundo-slider mb-5" *ngFor="let e of editoras">
     <div class="topo-slider">
         <p class="fs-3"><strong>{{ e.editora }}</strong></p>
     </div>
-    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+    <div id="" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" *ngFor="let phq of arrayHQs">
             <div class="row row-cols-6">
-                <div class="col-2" *ngFor="let hq of hqs">
+                <div class="col-2" *ngFor="let hq of phq">
                     <div class="hq bg-dark text-light">
                         <img class="img-fluid" [src]="hq.img">
                         <div class="d-flex justify-content-center align-items-center flex-column">
@@ -24,6 +24,18 @@
           </div>
         </div>
     </div>
+</div> -->
+
+<div>
+    <swiper [pagination]="true" #swipper class="swiper" >
+        <ng-template swiperSlide class="swiper-slide" *ngFor="let mp of arrayHQs">
+            <div *ngFor="let hq of mp">
+                <h2 class="fs-6">{{ hq | json }}</h2>
+            </div>
+            
+        </ng-template>
+    
+    </swiper>
 </div>
 
 <br><br><br><br><br>
