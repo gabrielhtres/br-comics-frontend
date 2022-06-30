@@ -29,10 +29,13 @@
 <div>
     <swiper [pagination]="true" #swipper class="swiper" >
         <ng-template swiperSlide class="swiper-slide" *ngFor="let mp of arrayHQs">
-            <div *ngFor="let hq of mp">
-                <h2 class="fs-6">{{ hq | json }}</h2>
-            </div>
-            
+            <div class="hq bg-dark text-light" *ngFor="let hq of mp">
+                <img class="img-fluid" [src]="hq.img">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="fs-6" style="margin: 0px 15px; text-align: center">{{ hq.titulo }}</h1>
+                    <button type="button" class="btn btn-indigo mt-3">Ver Mais</button>
+                </div>
+            </div> 
         </ng-template>
     
     </swiper>
